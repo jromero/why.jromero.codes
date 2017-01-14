@@ -1,0 +1,21 @@
+stages:
+  - build
+  - deploy
+
+build:
+  stage: build
+  image: m2sh/hugo-alpine
+  script: |
+    hugo
+  artifacts:
+    paths:
+    - public/
+
+deploy:
+  stage: deploy
+  image: garland/aws-cli-docker
+  script: |
+    cd public/
+    aws s3 sync --acl="public-read" --delete . s3://why.jromero.codes
+  only:
+  - master
