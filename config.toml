@@ -14,7 +14,7 @@ author = "Javier Romero"
 theme = "goa"
 
 ## Hugo Built-in Features
-# disqusShortname = "none"
+disqusShortname = "why-jromero-codes"
 # googleAnalytics = "XYZ"
 # enableRobotsTXT = true
 
