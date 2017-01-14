@@ -1,0 +1,58 @@
+title = "J. Romero - my technical site"
+baseurl = "http://jromero.codes/"
+
+builddrafts = false
+canonifyurls = false
+languageCode = "en-US"
+
+contentdir = "content"
+layoutdir = "layouts"
+publishdir = "public"
+
+author = "Javier Romero"
+
+theme = "goa"
+
+## Hugo Built-in Features
+# disqusShortname = "none"
+# googleAnalytics = "XYZ"
+# enableRobotsTXT = true
+
+## Site Settings
+[params]
+author = "Javier Romero"
+intro = "Software Engineer"
+description = """
+<i>"First do it, then do it right, then do it better."</i> - Addy Osmani
+"""
+authorimage = "profile.jpg"
+dateformat = "Jan 2, 2006"
+
+## Site Meta Settings
+[params.meta]
+description = "Javier Romero technical website"
+keywords = "developer,software engineer"
+
+## Social Accounts
+[params.social]
+github = "jromero"
+# instagram = "<username>"
+linkedin = "javier-romero-26736727"
+twitter = "JRomero1214"
+# facebook = "<username>"
+# google = "<username>"
+stackoverflow = "552902"
+# email = "you@example.com"
+
+## Extras
+[params.extra]
+copyright = "©2016 Javier Romero"
+poweredby = false
+hightlightjs = true
+
+## Main Menu
+#[[menu.main]]
+#    name = "blog"
+#    weight = 100
+#    identifier = "blog"
+#    url = "/blog/"
