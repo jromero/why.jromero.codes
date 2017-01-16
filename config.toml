@@ -48,7 +48,7 @@ stackoverflow = "552902"
 [params.extra]
 copyright = "©2016 Javier Romero"
 poweredby = false
-hightlightjs = true
+highlightjs = true
 
 ## Main Menu
 [[menu.main]]
