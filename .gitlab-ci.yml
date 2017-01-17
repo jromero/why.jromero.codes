@@ -4,7 +4,7 @@ stages:
 
 build:
   stage: build
-  image: m2sh/hugo-alpine
+  image: publysher/hugo
   script: |
     hugo
   artifacts:
