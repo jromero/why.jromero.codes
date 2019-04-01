@@ -38,21 +38,17 @@ keywords = "developer,software engineer"
 github = "jromero"
 # instagram = "<username>"
 linkedin = "javier-romero-26736727"
-twitter = "JRomero1214"
+twitter = "JavierRom_"
 # facebook = "<username>"
 # google = "<username>"
 stackoverflow = "552902"
-# email = "you@example.com"
+email = "root@jromero.codes"
 
 ## Extras
 [params.extra]
-copyright = "©2016 Javier Romero"
+copyright = "©2019 Javier Romero"
 poweredby = false
 highlightjs = true
 
 ## Main Menu
 [[menu.main]]
-    name = "blog"
-    weight = 100
-    identifier = "blog"
-    url = "/blog/"
