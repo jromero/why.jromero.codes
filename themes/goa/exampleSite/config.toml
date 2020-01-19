@@ -1,6 +1,6 @@
 ## Basic Configuration
 
-baseurl = "https://shenoybr.github.io/hugo-goa-demo/" 
+baseurl = "https://shenoybr.github.io/hugo-goa-demo/"
 builddrafts = false
 canonifyurls = false
 languageCode = "en-US"
@@ -36,18 +36,47 @@ keywords = "minimalist,blog,goa,hugo,developer"
 [params.social]
 github = "<username>"
 instagram = "<username>"
+xing = "<username>"
 linkedin = "<username>"
 twitter = "<username>"
 facebook = "<username>"
 google = "<username>"
+googlescholar = "<account_id>"
 stackoverflow = "<username>"
+lastfm = "<username>"
+goodreads = "<username>"
+gitlab = "<username>"
+bitbucket = "<username>"
+fivehundredpx = "<username>"
+flickr = "<username>"
+foursquare = "<username>"
+hackernews = "<username>"
+kickstarter = "<username>"
+patreon = "<username>"
+pintrest = "<username>"
+steam = "<username>"
+reddit = "<username>"
+snapchat = "<username>"
+youtube = "<channelid>"
+keybase = "<username>"
+twitch = "<username>"
+soundcloud = "<username>"
+tumblr = "<username>"
+strava = "<username>"
+skype = "<username>"
+telegram = "<username>"
+whatsapp = "<username>"
 email = "you@example.com"
+pgp = "<key_fingerprint>"
 
 ## Extras
 [params.extra]
-copyright = "© 2016. Erlich Bachman. [Some Rights Reserved](http://creativecommons.org/licenses/by/3.0/)." 
+copyright = "© 2016. Erlich Bachman. [Some Rights Reserved](http://creativecommons.org/licenses/by/3.0/)."
 poweredby = true
-hightlightjs = true
+highlightjs = true
+socialmarkup = true
+toc = true
+displayrssicon = true
 
 ## Main Menu
 [[menu.main]]
