@@ -1,5 +1,6 @@
 +++ 
-draft = false 
+title = "Migrating to GitHub - Git Pages"
+draft = true 
 comments = true 
 slug = "" 
 tags = ["ci"]
@@ -29,9 +30,88 @@ had to go through.
 
 ### Setting Up Pages
 
-#### Uploading your content
+#### Uploading content
 
-#### Custom Domain (Optional)
+```
+# create a new branch for gh-pages
+git checkout -b --orphan gh-pages
+
+# push
+git push -u origin gh-pages
+```
+
+To verify github has detected your branch you may check under GitHub Pages
+at:
+```
+https://github.com/{USER}/{REPO}/settings
+```
+
+
+#### Custom Domain
+
+```
+└─▪ dig why.jromero.codes CNAME
+
+; <<>> DiG 9.10.6 <<>> why.jromero.codes CNAME
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 46137
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 8192
+;; QUESTION SECTION:
+;why.jromero.codes.		IN	CNAME
+
+;; ANSWER SECTION:
+why.jromero.codes.	1800	IN	CNAME	jromero.github.io.
+```
+
+```
+└─▪ curl -I http://why.jromero.codes
+HTTP/1.1 200 OK
+x-amz-id-2: IwZkv6MJib3ThZiywMvokRolo2N8Vmhmtu6IKmhpDg9oDJpVNuBZ1VxwGz/DHZVD5jfOdpb8wSY=
+x-amz-request-id: 21E00A2E0BFFE5F3
+Date: Sun, 19 Jan 2020 04:21:12 GMT
+Last-Modified: Mon, 01 Apr 2019 18:36:22 GMT
+ETag: "bc3afa84f33d41684ed62a532d3cb62d"
+Content-Type: text/html
+Content-Length: 3674
+Server: AmazonS3
+```
+
+#### Enable HTTPS
+
+https://sslmate.com/caa/
+
+```
+Name            Type        Value
+jromero.codes.  CAA         0 issue ";"
+                            0 issuewild "letsencrypt.org"
+                            0 iodef "mailto:root@jromero.codes"
+```
+
+
+```
+└─▪ dig why.jromero.codes CAA
+
+; <<>> DiG 9.10.6 <<>> why.jromero.codes CAA
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 19838
+;; flags: qr rd ra; QUERY: 1, ANSWER: 4, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 8192
+;; QUESTION SECTION:
+;why.jromero.codes.		IN	CAA
+
+;; ANSWER SECTION:
+why.jromero.codes.	1800	IN	CNAME	jromero.github.io.
+jromero.github.io.	3600	IN	CAA	0 issue "digicert.com"
+jromero.github.io.	3600	IN	CAA	0 issue "letsencrypt.org"
+jromero.github.io.	3600	IN	CAA	0 issuewild "digicert.com"
+```
 
 ### Setting Up Actions
 

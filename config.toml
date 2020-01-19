@@ -52,7 +52,7 @@ highlightjs = true
 
 ## Main Menu
 [[menu.main]]
-name = "blog"
-weight = 100
-identifier = "blog"
-url = "/blog/"
+#name = "blog"
+#weight = 100
+#identifier = "blog"
+#url = "/blog/"
