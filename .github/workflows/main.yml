@@ -1,0 +1,20 @@
+name: CI
+
+on: [push]
+
+jobs:
+
+  build:
+    # specifies the runner for the entire job
+    runs-on: ubuntu-latest
+    steps:
+      # checkout source code
+      - uses: actions/checkout@v1
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2.4.1
+        with:
+          hugo-version: '0.62.2'
+          extended: true
+      - name: Hugo build
+        run: hugo
+    
