@@ -1,4 +1,4 @@
-name: CI
+name: Build and Deploy
 
 on:
   push:
@@ -8,10 +8,8 @@ on:
 jobs:
 
   build:
-    # specifies the runner for the entire job
     runs-on: ubuntu-latest
     steps:
-      # checkout source code
       - uses: actions/checkout@v1
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2.4.1
