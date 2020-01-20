@@ -3,15 +3,19 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://why.jromero.codes/categories/</loc>
+    <loc>http://why.jromero.codes/blog/</loc>
   </url>
   
   <url>
-    <loc>https://why.jromero.codes/</loc>
+    <loc>http://why.jromero.codes/categories/</loc>
   </url>
   
   <url>
-    <loc>https://why.jromero.codes/tags/</loc>
+    <loc>http://why.jromero.codes/</loc>
+  </url>
+  
+  <url>
+    <loc>http://why.jromero.codes/tags/</loc>
   </url>
   
 </urlset>
