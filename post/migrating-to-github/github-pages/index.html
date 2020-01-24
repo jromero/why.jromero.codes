@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="">
+<meta name="description" content="This quick tutorial will describe the process for setting up GitHub Pages with a custom domain and HTTPS enabled.
+Step 1. Uploading content There are various methods to get GitHub Pages published. Using the gh-pages branch keeps the master branch free from the clutter of build artifacts. This works really well for CI as demonstrated on part 2 of this journey.
+First step was to create the gh-pages branch and push it:" />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="" />
+<link rel="canonical" href="https://why.jromero.codes/post/migrating-to-github/github-pages/" />
+
+
+    <title>
+        
+            Setup Git Pages :: Javier Romero  — A simple theme for Hugo
+        
+    </title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="/main.min.5dcefbf8102eb536dd3e2de53ffebfa58599ab2435c241a0db81728a5e015f2e.css">
+
+
+
+
+<meta itemprop="name" content="Setup Git Pages">
+<meta itemprop="description" content="This quick tutorial will describe the process for setting up GitHub Pages with a custom domain and HTTPS enabled.
+Step 1. Uploading content There are various methods to get GitHub Pages published. Using the gh-pages branch keeps the master branch free from the clutter of build artifacts. This works really well for CI as demonstrated on part 2 of this journey.
+First step was to create the gh-pages branch and push it:">
+<meta itemprop="datePublished" content="2020-01-21T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2020-01-21T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="445">
+<meta itemprop="image" content="https://why.jromero.codes/"/>
+
+
+
+<meta itemprop="keywords" content="github,gh-pages," /><meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://why.jromero.codes/"/>
+
+<meta name="twitter:title" content="Setup Git Pages"/>
+<meta name="twitter:description" content="This quick tutorial will describe the process for setting up GitHub Pages with a custom domain and HTTPS enabled.
+Step 1. Uploading content There are various methods to get GitHub Pages published. Using the gh-pages branch keeps the master branch free from the clutter of build artifacts. This works really well for CI as demonstrated on part 2 of this journey.
+First step was to create the gh-pages branch and push it:"/>
+
+
+
+
+
+    <meta property="article:published_time" content="2020-01-21 00:00:00 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+    </head>
+
+    <body class="dark-theme">
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text">cd /home/jromero</span>
+            <span class="logo__cursor" style=""></span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="https://why.jromero.codes/post/">blog</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+
+            <span class="theme-toggle unselectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+</span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+
+        <div class="post-info">
+            
+            </p>
+        </div>
+
+        <article>
+            <h2 class="post-title"><a href="https://why.jromero.codes/post/migrating-to-github/github-pages/">Setup Git Pages</a></h2>
+
+            
+
+            <div class="post-content">
+                <p>This quick tutorial will describe the process for setting up <a href="https://pages.github.com/">GitHub Pages</a> with a custom domain and HTTPS
+enabled.</p>
+<h3 id="step-1-uploading-content">Step 1. Uploading content</h3>
+<p>There are various methods to get GitHub Pages published. Using the <code>gh-pages</code> branch keeps the <code>master</code> branch
+free from the clutter of build artifacts. This works really well for CI as demonstrated on part 2 of this journey.</p>
+<p>First step was to create the <code>gh-pages</code> branch and push it:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git checkout -b --orphan gh-pages
+git push -u origin gh-pages
+</code></pre></div><p>To verify github has detected the branch you may check under GitHub Pages at:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">https://github.com/{USER}/{REPO}/settings
+</code></pre></div>
+    <figure class="left" >
+        <img src="../img/gh-pages-branch.png"   />
+
+        
+    </figure>
+
+
+<h3 id="step-2-custom-domain">Step 2. Custom Domain</h3>
+<p>To setup a custom domain, you must first configure it at:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">https://github.com/{USER}/{REPO}/settings
+</code></pre></div>
+    <figure class="left" >
+        <img src="../img/custom-domain-field.png"   />
+
+        
+    </figure>
+
+
+<p>Then go to your domain registrar and configure a <code>CNAME</code> to your custom domain.</p>
+
+    <figure class="left" >
+        <img src="../img/cname.png"   />
+
+        
+    </figure>
+
+
+<p>Verify that the <code>CNAME</code> has taken effect. Depending on your DNS server and settings this could take a few
+hours to propagate.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ dig why.jromero.codes CNAME +nostats +nocomments +nocmd
+
+; &lt;&lt;&gt;&gt; DiG 9.10.6 &lt;&lt;&gt;&gt; why.jromero.codes CNAME +nostats +nocomments +nocmd
+;; global options: +cmd
+;why.jromero.codes.		IN	CNAME
+why.jromero.codes.	1800	IN	CNAME	jromero.github.io.
+</code></pre></div><p>Last part is to verify that GitHub is serving your website by double-checking the headers.
+Specifically the <code>server:</code> header.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ curl -I http://why.jromero.codes
+
+HTTP/2 <span style="color:#ae81ff">200</span> 
+server: GitHub.com
+...
+</code></pre></div><h3 id="step-3-enable-https">Step 3. Enable HTTPS</h3>
+<p>To enable HTTPS GitHub must be able to issue a certificate for your domain via <a href="letsencrypt.org">Let's Encrypt</a>.</p>
+<p>With the use of this <a href="https://sslmate.com/caa/">online tool</a> a set of <code>CAA</code> records can be generated that enables
+Let's Encrypt to issue certificates.</p>
+<p><em>NOTICE: All the changes are made to the top-level domain and not the subdomain.</em></p>
+<p>The configuration will end up something like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">Name            Type        Value
+jromero.codes.  CAA         0 issue &#34;;&#34;
+                            0 issuewild &#34;letsencrypt.org&#34;
+                            0 iodef &#34;mailto:root@jromero.codes&#34;
+</code></pre></div><p>Again, you'll go to the domain registrar and configure 3 <code>CAA</code> records to your custom domain.</p>
+
+    <figure class="left" >
+        <img src="../img/caa.png"   />
+
+        
+    </figure>
+
+
+<p>After applying the changes and waiting for propagation, a quick <code>dig</code> should show your changes:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ dig jromero.codes CAA +nostats +nocomments +nocmd
+  
+; &lt;&lt;&gt;&gt; DiG 9.10.6 &lt;&lt;&gt;&gt; jromero.codes CAA +nostats +nocomments +nocmd
+;; global options: +cmd
+;jromero.codes.                 IN      CAA
+jromero.codes.          <span style="color:#ae81ff">1799</span>    IN      CAA     <span style="color:#ae81ff">0</span> iodef <span style="color:#e6db74">&#34;mailto:root@jromero.codes&#34;</span>
+jromero.codes.          <span style="color:#ae81ff">1799</span>    IN      CAA     <span style="color:#ae81ff">0</span> issue <span style="color:#e6db74">&#34;;&#34;</span>
+jromero.codes.          <span style="color:#ae81ff">1799</span>    IN      CAA     <span style="color:#ae81ff">0</span> issuewild <span style="color:#e6db74">&#34;letsencrypt.org&#34;</span>
+</code></pre></div><p>Additionally, you should see an update to the <code>Enforce HTTPS</code> option:</p>
+
+    <figure class="left" >
+        <img src="../img/enforce-https-24hr.png"   />
+
+        
+    </figure>
+
+
+<p>Eventually, this will change to:</p>
+
+    <figure class="left" >
+        <img src="../img/enforce-https-active.png"   />
+
+        
+    </figure>
+
+
+<p>You can verify by pulling up your website in chrome and checking the connection:</p>
+
+    <figure class="center" >
+        <img src="../img/cert.png"   style="width: 300px"  />
+
+        
+    </figure>
+
+
+<h4 id="troubleshooting">Troubleshooting</h4>
+<p>If you run into any problems, a few helpful commands:</p>
+<h5 id="view-connection-handshake">View connection handshake</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">curl -I -v https://why.jromero.codes
+</code></pre></div><h5 id="view-certificate-information">View certificate information</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">echo | openssl s_client -showcerts -servername why.jromero.codes -connect why.jromero.codes:443 2&gt;/dev/null | openssl x509 -inform pem -noout -text
+</code></pre></div><h3 id="done">Done</h3>
+<p>You should now have a statically hosted site with no storage, traffic, or certificate cost!</p>
+
+    <figure class="left" >
+        <img src="https://media.giphy.com/media/SEre9eirTBgdO/source.gif"   />
+
+        
+    </figure>
+
+
+
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+  				<p>
+  					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://why.jromero.codes/tags/github">github</a></span><span class="tag"><a href="https://why.jromero.codes/tags/gh-pages">gh-pages</a></span>
+  				</p>
+  			</div>
+
+        
+          <div id="comments" class="thin">
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "why-jromero-codes" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+        
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2020</span>
+            
+            <span>Javier Romero</span>
+            <span> <a href="https://why.jromero.codes/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
+        </div>
+    </div>
+    
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+
+<script type="text/javascript" src="/bundle.min.2d5469329143160ae2456a69c3c76dc2d0a3b212b46afe291a51bd68650ed6f8697e001dab54f1c272c77ce08092a8c55e5bb4314e0ee334aab4b927ec896638.js" integrity="sha512-LVRpMpFDFgriRWppw8dtwtCjshK0av4pGlG9aGUO1vhpfgAdq1TxwnLHfOCAkqjFXlu0MU4O4zSqtLkn7IlmOA=="></script>
+
+
+
+    </body>
+</html>
