@@ -10,49 +10,75 @@ layoutdir = "layouts"
 publishdir = "public"
 
 author = "Javier Romero"
-
-theme = "goa"
-
-## Hugo Built-in Features
 disqusShortname = "why-jromero-codes"
-# googleAnalytics = "XYZ"
-# enableRobotsTXT = true
+
+theme = "hello-friend-ng"
 
 ## Site Settings
 [params]
-author = "Javier Romero"
-intro = "Software Engineer"
-description = """
-<i>"First do it, then do it right, then do it better."</i> - Addy Osmani
-"""
-authorimage = "profile.jpg"
-dateformat = "Jan 2, 2006"
+  author = "Javier Romero"
+  intro = "Software Engineer"
+  description = """
+  <i>"First do it, then do it right, then do it better."</i> - Addy Osmani
+  """
+  authorimage = "profile.jpg"
+  dateformat = "Jan 2, 2006"
 
-## Site Meta Settings
-[params.meta]
-description = "Javier Romero technical website"
-keywords = "developer,software engineer"
+  dateform        = "Jan 2, 2006"
+  dateformShort   = "Jan 2"
+  dateformNum     = "2006-01-02"
+  dateformNumTime = "2006-01-02 15:04 -0700"
+
+  # Set disableReadOtherPosts to true in order to hide the links to other posts.
+  disableAttribution = true
+  disableReadOtherPosts = false
+
+  # Metadata mostly used in document's head
+  keywords = "homepage, blog, science, informatics, development, programming"
+  images = [""]
+
+  # Directory name of your blog content (default is `content/posts`)
+  contentTypeName = "posts"
+
+  # Default theme "light" or "dark"
+  defaultTheme = "dark"
+
 
 ## Social Accounts
-[params.social]
-github = "jromero"
-# instagram = "<username>"
-linkedin = "javier-romero-26736727"
-twitter = "JavierRom_"
-# facebook = "<username>"
-# google = "<username>"
-stackoverflow = "552902"
-email = "root@jromero.codes"
+[[params.social]]
+    name = "twitter"
+    url  = "https://twitter.com/JavierRom_"
 
-## Extras
-[params.extra]
-copyright = "©2020 Javier Romero"
-poweredby = false
-highlightjs = true
+  [[params.social]]
+    name = "github"
+    url  = "https://github.com/jromero"
+
+  [[params.social]]
+    name = "email"
+    url  = "mailto:root@jromero.codes"
+
+  [[params.social]]
+    name = "linkedin"
+    url  = "https://www.linkedin.com/in/javier-rom/"
+
+  [[params.social]]
+    name = "stackoverflow"
+    url  = "https://stackoverflow.com/users/552902/jromero"
 
 ## Main Menu
 [[menu.main]]
 name = "blog"
 weight = 100
-identifier = "blog"
-url = "/blog/"
+url = "/post/"
+
+[languages]
+  [languages.en]
+    title = "Javier Romero"
+    subtitle = "A simple theme for Hugo"
+    keywords = ""
+    copyright = "Javier Romero"
+    readOtherPosts = "Read other posts"
+
+    [languages.en.params.logo]
+      logoText = "cd /home/jromero"
+      logoHomeLink = "/"
