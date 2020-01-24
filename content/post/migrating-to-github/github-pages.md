@@ -116,9 +116,19 @@ You can verify by pulling up your website in chrome and checking the connection:
 
 {{< figure src="../img/cert.png" position="center" style="width: 300px" >}}
 
-#### Troubleshooting
+### Done
 
-If you run into any problems, a few helpful commands:
+You should now have a statically hosted site with no storage, traffic, or certificate cost!
+
+{{< figure src="https://media.giphy.com/media/SEre9eirTBgdO/source.gif" position="center" >}}
+
+---
+
+## Troubleshooting Tips
+
+Now, if you ran into any snags, here are a few tips...
+
+#### SSL Certificate
 
 ##### View connection handshake
 ```shell script
@@ -129,12 +139,6 @@ curl -I -v https://why.jromero.codes
 ```shell script
 echo | openssl s_client -showcerts -servername why.jromero.codes -connect why.jromero.codes:443 2>/dev/null | openssl x509 -inform pem -noout -text
 ```
-
-### Done
-
-You should now have a statically hosted site with no storage, traffic, or certificate cost!
-
-{{< figure src="https://media.giphy.com/media/SEre9eirTBgdO/source.gif" >}}
 
 
 [github-pages]: https://pages.github.com/
