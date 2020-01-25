@@ -38,7 +38,7 @@ Step 1. Uploading content There are various methods to get GitHub Pages publishe
 First step was to create the gh-pages branch and push it:">
 <meta itemprop="datePublished" content="2020-01-21T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2020-01-21T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="445">
+<meta itemprop="wordCount" content="450">
 <meta itemprop="image" content="https://why.jromero.codes/"/>
 
 
@@ -230,23 +230,25 @@ jromero.codes.          <span style="color:#ae81ff">1799</span>    IN      CAA  
     </figure>
 
 
-<h4 id="troubleshooting">Troubleshooting</h4>
-<p>If you run into any problems, a few helpful commands:</p>
-<h5 id="view-connection-handshake">View connection handshake</h5>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">curl -I -v https://why.jromero.codes
-</code></pre></div><h5 id="view-certificate-information">View certificate information</h5>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">echo | openssl s_client -showcerts -servername why.jromero.codes -connect why.jromero.codes:443 2&gt;/dev/null | openssl x509 -inform pem -noout -text
-</code></pre></div><h3 id="done">Done</h3>
+<h3 id="done">Done</h3>
 <p>You should now have a statically hosted site with no storage, traffic, or certificate cost!</p>
 
-    <figure class="left" >
+    <figure class="center" >
         <img src="https://media.giphy.com/media/SEre9eirTBgdO/source.gif"   />
 
         
     </figure>
 
 
-
+<hr>
+<h2 id="troubleshooting-tips">Troubleshooting Tips</h2>
+<p>Now, if you ran into any snags, here are a few tips&hellip;</p>
+<h4 id="ssl-certificate">SSL Certificate</h4>
+<h5 id="view-connection-handshake">View connection handshake</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">curl -I -v https://why.jromero.codes
+</code></pre></div><h5 id="view-certificate-information">View certificate information</h5>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">echo | openssl s_client -showcerts -servername why.jromero.codes -connect why.jromero.codes:443 2&gt;/dev/null | openssl x509 -inform pem -noout -text
+</code></pre></div>
             </div>
         </article>
 
