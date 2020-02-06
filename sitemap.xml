@@ -3,6 +3,31 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://why.jromero.codes/tags/github/</loc>
+    <lastmod>2020-02-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://why.jromero.codes/post/migrating-to-github/github-actions/</loc>
+    <lastmod>2020-02-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://why.jromero.codes/tags/github-actions/</loc>
+    <lastmod>2020-02-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://why.jromero.codes/</loc>
+    <lastmod>2020-02-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://why.jromero.codes/tags/</loc>
+    <lastmod>2020-02-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://why.jromero.codes/post/migrating-to-github/</loc>
     <lastmod>2020-01-21T20:16:59-06:00</lastmod>
   </url>
@@ -13,22 +38,7 @@
   </url>
   
   <url>
-    <loc>https://why.jromero.codes/tags/github/</loc>
-    <lastmod>2020-01-21T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://why.jromero.codes/</loc>
-    <lastmod>2020-01-21T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://why.jromero.codes/post/migrating-to-github/github-pages/</loc>
-    <lastmod>2020-01-21T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://why.jromero.codes/tags/</loc>
     <lastmod>2020-01-21T00:00:00+00:00</lastmod>
   </url>
   

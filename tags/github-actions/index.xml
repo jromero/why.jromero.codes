@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Migrating to Github on Javier Romero</title>
-    <link>https://why.jromero.codes/post/migrating-to-github/</link>
-    <description>Recent content in Migrating to Github on Javier Romero</description>
+    <title>github-actions on Javier Romero</title>
+    <link>https://why.jromero.codes/tags/github-actions/</link>
+    <description>Recent content in github-actions on Javier Romero</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Javier Romero</copyright>
-    <lastBuildDate>Tue, 21 Jan 2020 20:16:59 -0600</lastBuildDate>
+    <lastBuildDate>Wed, 05 Feb 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://why.jromero.codes/post/migrating-to-github/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://why.jromero.codes/tags/github-actions/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -21,17 +21,6 @@
       <description>Setting Up Actions Major Caveat!!! At the time of this writing there was a&amp;hellip; major inconvenience.
 Basically, there are some restrictions that prevent Github actions from being able to publish GitHub Pages. To work around this I had to monkey around different git configurations. The fact that my site uses submodules made it even more cumbersome. Nonetheless, it worked and here is how I did it.
 Step 1. Configure a deployment key There are other multiple options for providing the GitHub action authorization.</description>
-    </item>
-    
-    <item>
-      <title>Setup Git Pages</title>
-      <link>https://why.jromero.codes/post/migrating-to-github/github-pages/</link>
-      <pubDate>Tue, 21 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://why.jromero.codes/post/migrating-to-github/github-pages/</guid>
-      <description>This quick tutorial will describe the process for setting up GitHub Pages with a custom domain and HTTPS enabled.
-Step 1. Uploading content There are various methods to get GitHub Pages published. Using the gh-pages branch keeps the master branch free from the clutter of build artifacts. This works really well for CI as demonstrated on part 2 of this journey.
-First step was to create the gh-pages branch and push it:</description>
     </item>
     
   </channel>

@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>Javier Romero</copyright>
-    <lastBuildDate>Tue, 21 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 05 Feb 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://why.jromero.codes/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>GitHub Actions for GitHub Pages</title>
+      <link>https://why.jromero.codes/post/migrating-to-github/github-actions/</link>
+      <pubDate>Wed, 05 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://why.jromero.codes/post/migrating-to-github/github-actions/</guid>
+      <description>Setting Up Actions Major Caveat!!! At the time of this writing there was a&amp;hellip; major inconvenience.
+Basically, there are some restrictions that prevent Github actions from being able to publish GitHub Pages. To work around this I had to monkey around different git configurations. The fact that my site uses submodules made it even more cumbersome. Nonetheless, it worked and here is how I did it.
+Step 1. Configure a deployment key There are other multiple options for providing the GitHub action authorization.</description>
+    </item>
     
     <item>
       <title>Setup Git Pages</title>
