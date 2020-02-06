@@ -6,7 +6,6 @@ on:
       - master
 
 jobs:
-
   build:
     runs-on: ubuntu-latest
     steps:
@@ -14,9 +13,15 @@ jobs:
       - name: Checkout submodules
         shell: bash
         run: |
+
+          # NOTE: the deploy key below is per repo so it wouldn't work for the necessary submodules.
+          # NOTE: this works because the submodules are public.
           git config --global url."https://github.com/".insteadOf "git@github.com:"
+
           git submodule sync --recursive
           git submodule update --init --force --recursive --depth=1
+
+          # NOTE: we need to revert this because the "Deploy" step needs to use ssh
           git config --global --unset-all url."https://github.com/".insteadof
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2.4.1
@@ -29,7 +34,7 @@ jobs:
         uses: webfactory/ssh-agent@v0.2.0
         with:
           ssh-private-key: ${{ secrets.DEPLOY_PRIVATE_KEY }}
-      - name: Build and Deploy
+      - name: Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
           SSH: true

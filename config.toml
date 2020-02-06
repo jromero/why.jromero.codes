@@ -14,6 +14,8 @@ disqusShortname = "why-jromero-codes"
 
 theme = "hello-friend-ng"
 
+enableEmoji = true
+
 ## Site Settings
 [params]
   author = "Javier Romero"
